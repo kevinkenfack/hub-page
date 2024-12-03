@@ -25,13 +25,12 @@ const Dashboard = () => {
 
   return (
     <div className="min-h-screen bg-gray-950 text-white">
-      {/* Header Section */}
       <div className="relative">
         <div className="absolute inset-0 bg-gradient-to-b from-blue-600/5 via-purple-600/5 to-transparent pointer-events-none" />
         
-        {/* Top Navigation - Glass Effect */}
+        {/* Navigation */}
         <div className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${scrolled ? 'bg-gray-950/80 backdrop-blur-lg border-b border-white/5' : ''}`}>
-          <div className="max-w-7xl mx-auto px-6">
+          <div className="max-w-4xl mx-auto px-4 sm:px-6">
             <div className="flex items-center justify-between py-4">
               <div className="flex items-center gap-6">
                 <div className="flex items-center gap-3">
@@ -56,12 +55,11 @@ const Dashboard = () => {
         </div>
 
         {/* Main Content */}
-        <div className="relative pt-24 px-6 pb-12">
+        <div className="relative pt-24 px-4 sm:px-6 pb-12 max-w-4xl mx-auto">
           {/* Featured Achievement Card */}
           <div className="mb-8 group">
             <div className="relative overflow-hidden rounded-3xl bg-gradient-to-br from-purple-900/50 via-blue-900/50 to-purple-900/50 p-[1px] transition-all duration-300 hover:from-purple-600/50 hover:via-blue-600/50 hover:to-purple-600/50">
               <div className="relative bg-gray-950/95 rounded-3xl p-6 backdrop-blur-xl overflow-hidden">
-                {/* Animated background patterns */}
                 <div className="absolute inset-0 opacity-30">
                   <div className="absolute top-0 -left-4 w-24 h-24 bg-blue-500 rounded-full mix-blend-multiply filter blur-xl animate-blob" />
                   <div className="absolute top-0 -right-4 w-24 h-24 bg-purple-500 rounded-full mix-blend-multiply filter blur-xl animate-blob animation-delay-2000" />
@@ -101,7 +99,7 @@ const Dashboard = () => {
           {/* Course Promo Card */}
           <div className="mb-12 group">
             <div className="bg-gradient-to-br from-blue-500/5 to-purple-500/5 rounded-3xl p-6 backdrop-blur-sm border border-white/5 transition-all duration-300 hover:border-white/10">
-              <div className="flex items-start gap-6">
+              <div className="flex flex-col sm:flex-row items-start gap-6">
                 <div className="relative flex-shrink-0">
                   <div className="w-20 h-20 rounded-2xl overflow-hidden transition-transform duration-300 group-hover:scale-105">
                     <img src="/80.png" alt="Course" className="w-full h-full object-cover" />
@@ -110,7 +108,7 @@ const Dashboard = () => {
                     New
                   </div>
                 </div>
-                <div className="flex-1">
+                <div className="flex-1 w-full">
                   <h3 className="text-2xl font-bold mb-2 bg-gradient-to-r from-white via-blue-100 to-purple-100 bg-clip-text text-transparent">
                     Become a top 1% Next.js 15 Developer
                   </h3>
@@ -132,10 +130,10 @@ const Dashboard = () => {
       </div>
 
       {/* Social Links Section */}
-      <div className="px-6 space-y-6">
+      <div className="px-4 sm:px-6 max-w-4xl mx-auto space-y-6">
         <div className="space-y-4">
           <h4 className="text-sm font-medium text-gray-400 tracking-wider">SOCIAL MEDIA HANDLES</h4>
-          <div className="grid gap-3">
+          <div className="grid gap-3 sm:grid-cols-2">
             {socialLinks.map((link) => (
               <a
                 key={link.name}
@@ -158,13 +156,13 @@ const Dashboard = () => {
         {/* Resources Section */}
         <div className="space-y-4 pb-8">
           <h4 className="text-sm font-medium text-gray-400 tracking-wider">FREEBIES AND MORE</h4>
-          <div className="grid gap-3">
+          <div className="grid gap-3 sm:grid-cols-2">
             <a href="#" className="group relative overflow-hidden rounded-2xl bg-white/5 backdrop-blur-sm border border-white/5 p-4 transition-all duration-300 hover:bg-white/10 hover:border-white/10 hover:-translate-y-0.5">
               <div className="absolute inset-0 bg-gradient-to-r from-blue-500/10 to-purple-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
               <div className="relative flex items-center justify-between">
                 <div className="flex items-center gap-3">
                   <BookOpen className="w-5 h-5 text-blue-400" />
-                  <span className="font-medium">Free Roadmaps, Guides and eBooks</span>
+                  <span className="font-medium">Free Roadmaps</span>
                 </div>
                 <ArrowUpRight className="w-5 h-5 text-gray-400 transition-all duration-300 group-hover:text-white group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
               </div>
